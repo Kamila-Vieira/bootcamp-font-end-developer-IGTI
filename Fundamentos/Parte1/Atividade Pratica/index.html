@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Calculadora</title>
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h1>Super Calculadora</h1>
+    <div id="container">
+      <h2>Numeros à calcular</h2>
+      <div class="input-container">
+        <div>
+          <label for="first-number">Primeiro Número (a):</label>
+          <input type="number" class="first-number" />
+        </div>
+        <div>
+          <label for="second-number">Segundo Número (b):</label>
+          <input type="number" class="second-number" />
+        </div>
+      </div>
+      <h2>Resultados:</h2>
+      <div class="results-container">
+        <div class="sum">
+          <label for="sum-result">Soma (a + b):</label>
+          <input type="number" class="sum-result" disabled />
+        </div>
+        <div class="subtraction">
+          <label for="subtraction-result">Soma (a - b):</label>
+          <input
+            type="number"
+            class="subtraction-result"
+            disabled
+            onchange="calculate()"
+          />
+        </div>
+        <div class="subtractionReverse">
+          <label for="subtractionReverse-result">Soma (b - a):</label>
+          <input
+            type="number"
+            class="subtractionReverse-result"
+            disabled
+            onchange="calculate()"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
