@@ -1,7 +1,6 @@
 window.addEventListener("load", start);
 
-function start() {
-  //clearInputs();
+function start(event) {
   inputFirtNumber = document.querySelector(".first-number");
   inputFirtNumber.addEventListener("input", handleFirstNumberChange);
 
@@ -31,6 +30,12 @@ function start() {
     ".factorSecondNumber-result"
   );
 
+  var hasNumber = !!event.target.value && event.target.value.trim() !== "";
+  if (!hasNumber) {
+    clearInputs();
+    return;
+  }
+
   calculate();
 }
 
@@ -45,16 +50,23 @@ function handleSecondNumberChange() {
 function calculate() {
   var a = parseInt(inputFirtNumber.value, 10);
   var b = parseInt(inputSecondNumber.value, 10);
+
   inputSum.value = sum(a, b);
+
   inputSubtract.value = subtract(a, b);
   inputSubtractReverse.value = subtract(b, a);
+
   inputMultiply.value = multiply(a, b);
+
   inputDivide.value = divide(a, b);
   inputDivideReverse.value = divide(b, a);
+
   inputSquaredFirstNumber.value = squaredNumber(a);
   inputSquaredSecondNumber.value = squaredNumber(b);
+
   inputFirstNumberDivisors.value = numberDivisors(a);
   inputSecondNumberDivisors.value = numberDivisors(b);
+
   inputFactorFirstNumber.value = factorNumber(a);
   inputFactorSecondNumber.value = factorNumber(b);
 }
@@ -91,26 +103,26 @@ function numberDivisors(number) {
 }
 //k) e l)
 function factorNumber(number) {
-  if (number === 0) {
-    return 1;
-  } else if (number > 21) {
+  if (number > 21) {
     return "Número muito grande!";
+  } else if (number === 0 || NaN) {
+    return 1;
   } else {
     return number * factorNumber(number - 1);
   }
 }
 
 function clearInputs() {
-  inputSum.value = 0;
-  inputSubtract.value = 0;
-  inputSubtractReverse.value = 0;
-  inputMultiply.value = 0;
-  inputDivide.value = 0;
-  inputDivideReverse.value = 0;
-  inputSquaredFirstNumber.value = 0;
-  inputSquaredSecondNumber.value = 0;
-  inputFirstNumberDivisors.value = 0;
-  inputSecondNumberDivisors.value = 0;
-  inputFactorFirstNumber.value = 0;
-  inputFactorSecondNumber.value = 0;
+  inputSum.value = "";
+  inputSubtract.value = "";
+  inputSubtractReverse.value = "";
+  inputMultiply.value = "";
+  inputDivide.value = "";
+  inputDivideReverse.value = "";
+  inputSquaredFirstNumber.value = "";
+  inputSquaredSecondNumber.value = "";
+  inputFirstNumberDivisors.value = "";
+  inputSecondNumberDivisors.value = "";
+  inputFactorFirstNumber.value = "";
+  inputFactorSecondNumber.value = "";
 }

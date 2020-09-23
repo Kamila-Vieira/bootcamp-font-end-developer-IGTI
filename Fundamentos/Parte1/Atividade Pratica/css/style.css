@@ -26,19 +26,20 @@ h1 {
   padding: 0 10rem;
 }
 
-label {
+.input-container label {
   margin-bottom: 1rem;
 }
 
-input {
+.input-container input {
   height: 30px;
   width: 30rem;
   border: none;
-  border-bottom: solid 1.5px #141414;
+  border-bottom: solid 2px #141414;
+  font-size: 20px;
 }
 
-input:hover {
-  border-bottom: solid 2px #852525;
+.input-container input:hover {
+  border-bottom: solid 3px #852525;
 }
 
 .input-container div {
@@ -57,6 +58,30 @@ input:hover {
 }
 
 .results-container {
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+  padding: 0 10rem;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+}
+
+.results-container div {
+  margin-bottom: 3rem;
+}
+
+.results-container label {
+  font-size: 18px;
+}
+
+.results-container input {
+  height: 30px;
+  width: 20rem;
+  border: none;
+  border-bottom: solid 3px #141414;
+  font-size: 18px;
+  margin-top: 1rem;
+  padding: 10px;
 }
 
 @media (max-width: 700px) {
