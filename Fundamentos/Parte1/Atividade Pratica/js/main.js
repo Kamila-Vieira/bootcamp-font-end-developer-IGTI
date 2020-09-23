@@ -1,79 +1,116 @@
-var inputFirtNumber = document.querySelector(".first-number");
-var inputSecondNumber = document.querySelector(".second-number");
-var inputSum = document.querySelector(".sum-result");
-var inputSubtraction = document.querySelector(".subtraction-result");
-var inputSubtractionReverse = document.querySelector(
-  ".subtractionReverse-result"
-);
+window.addEventListener("load", start);
 
-const firstNumberValue = inputFirtNumber.value;
-const secondNumberValue = inputSecondNumber.value;
-var firstNumber = parseInt(inputFirtNumber.value, 10);
-var secondNumber = parseInt(inputSecondNumber.value, 10);
+function start() {
+  //clearInputs();
+  inputFirtNumber = document.querySelector(".first-number");
+  inputFirtNumber.addEventListener("input", handleFirstNumberChange);
 
+  inputSecondNumber = document.querySelector(".second-number");
+  inputSecondNumber.addEventListener("input", handleSecondNumberChange);
+
+  inputSum = document.querySelector(".sum-result");
+  inputSubtract = document.querySelector(".subtract-result");
+  inputSubtractReverse = document.querySelector(".subtractReverse-result");
+  inputMultiply = document.querySelector(".multiply-result");
+  inputDivide = document.querySelector(".divide-result");
+  inputDivideReverse = document.querySelector(".divideReverse-result");
+  inputSquaredFirstNumber = document.querySelector(
+    ".squaredFirstNumber-result"
+  );
+  inputSquaredSecondNumber = document.querySelector(
+    ".squaredSecondNumber-result"
+  );
+  inputFirstNumberDivisors = document.querySelector(
+    ".firstNumberDivisors-result"
+  );
+  inputSecondNumberDivisors = document.querySelector(
+    ".secondNumberDivisors-result"
+  );
+  inputFactorFirstNumber = document.querySelector(".factorFirstNumber-result");
+  inputFactorSecondNumber = document.querySelector(
+    ".factorSecondNumber-result"
+  );
+
+  calculate();
+}
+
+function handleFirstNumberChange() {
+  calculate();
+}
+
+function handleSecondNumberChange() {
+  calculate();
+}
+
+function calculate() {
+  var a = parseInt(inputFirtNumber.value, 10);
+  var b = parseInt(inputSecondNumber.value, 10);
+  inputSum.value = sum(a, b);
+  inputSubtract.value = subtract(a, b);
+  inputSubtractReverse.value = subtract(b, a);
+  inputMultiply.value = multiply(a, b);
+  inputDivide.value = divide(a, b);
+  inputDivideReverse.value = divide(b, a);
+  inputSquaredFirstNumber.value = squaredNumber(a);
+  inputSquaredSecondNumber.value = squaredNumber(b);
+  inputFirstNumberDivisors.value = numberDivisors(a);
+  inputSecondNumberDivisors.value = numberDivisors(b);
+  inputFactorFirstNumber.value = factorNumber(a);
+  inputFactorSecondNumber.value = factorNumber(b);
+}
 //a)
 function sum(a, b) {
   return a + b;
 }
-//b)
-function subtraction(a, b) {
+//b) e c)
+function subtract(a, b) {
   return a - b;
 }
-//c)
-function subtractionReverse(a, b) {
-  return b - a;
-}
 //d)
-function multiplication(a, b) {
+function multiply(a, b) {
   return b * a;
 }
-//e)
-function division(a, b) {
+//e) e f)
+function divide(a, b) {
   if (b === 0) {
     return "Divisão por 0";
   }
-  return a / b;
+  return (a / b).toFixed(2);
 }
-//f)
-function divisionReverse(a, b) {
-  if (a === 0) {
-    return "Divisão por 0";
-  }
-  return b / a;
+//g) e h)
+function squaredNumber(number) {
+  return number ** 2;
 }
-//g)
-function squaredFirstNumber(a) {
-  return a ** 2;
-}
-//h)
-function squaredSecondNumber(b) {
-  return b ** 2;
-}
-//i)
-function firstNumberDivisors(a) {
+//i) e j)
+function numberDivisors(number) {
   var divisors = [];
-  for (var i = 1; i < a.lenth; i++) {
-    var result = a / i;
-    if (result === 0) {
-      return (i += divisors).join(", ");
-    }
-    return divisors;
+  for (var i = 1; i <= number; i++) {
+    if (number % i === 0) divisors.push(i);
+  }
+  return `${divisors.join(", ")} (${divisors.length})`;
+}
+//k) e l)
+function factorNumber(number) {
+  if (number === 0) {
+    return 1;
+  } else if (number > 21) {
+    return "Número muito grande!";
+  } else {
+    return number * factorNumber(number - 1);
   }
 }
 
-function calculate() {
-  //alert("input Clicadíssimo! " + firstNumberValue);
-  var a = 2,
-    b = 3;
-
-  inputSum.value = sum(firstNumber, secondNumber);
-  inputSubtraction.value = subtraction(a, b);
-  inputSubtractionReverse.value = subtractionReverse(a, b);
+function clearInputs() {
+  inputSum.value = 0;
+  inputSubtract.value = 0;
+  inputSubtractReverse.value = 0;
+  inputMultiply.value = 0;
+  inputDivide.value = 0;
+  inputDivideReverse.value = 0;
+  inputSquaredFirstNumber.value = 0;
+  inputSquaredSecondNumber.value = 0;
+  inputFirstNumberDivisors.value = 0;
+  inputSecondNumberDivisors.value = 0;
+  inputFactorFirstNumber.value = 0;
+  inputFactorSecondNumber.value = 0;
 }
-
-/* var calculate = () => {
-  return sum(firstNumber, secondNumber);
-}; */
-
-console.log();
-console.log(sum(inputFirtNumber.value, inputSecondNumber.value));
