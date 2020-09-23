@@ -16,4 +16,4 @@ Estudos, desafios e atividades práticas realizadas durante o Bootcamp da IGTI.
 
 **Screenshot (Atividade Prática):**
 
-<img src="./Fundamentos/Parte1/Atividade Pratica/img/SuperCalculadoraScreenshot.jpeg" alt="Screenshot da aplicação" width="300">
+<img src="./Fundamentos/Parte1/Atividade Pratica/img/SuperCalculadoraScreenshot.jpeg" alt="Screenshot da aplicação" width="500">
