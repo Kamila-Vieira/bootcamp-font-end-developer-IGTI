@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Search Dev's</title>
+  </head>
+  <body>
+    <div id="main">
+      <h1>Search-Devs</h1>
+      <div id="search-container">
+        <input type="text" placeholder="Pesquisar por nome:" />
+        <button>Pesquisar</button>
+      </div>
+      <div id="filters-container">
+        <div class="filter-check">
+          <input type="checkbox" name="java" id="java" />
+          <label for="java">Java</label>
+          <input type="checkbox" name="javaScript" id="javaScript" />
+          <label for="javaScript">JavaScript</label>
+          <input type="checkbox" name="python" id="python" />
+          <label for="python">Python</label>
+        </div>
+        <div class="filter-option">
+          <label for="option">E</label>
+          <input type="radio" name="option" id="and" />
+          <label for="option">OU</label>
+          <input type="radio" name="option" id="or" checked />
+        </div>
+      </div>
+      <div id="cards-container">
+        <ul>
+          <li>
+            <p>Nome</p>
+            <p>Avatar</p>
+          </li>
+        </ul>
+      </div>
+      <div id="statistics-container"></div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
