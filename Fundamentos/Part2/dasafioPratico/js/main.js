@@ -1,37 +1,87 @@
-window.addEventListener("load", () => {
-  mappedDevs();
-  createDevsCards();
-  createStatistics();
+"use strict";
+// Variaveis de estado
+let cardListContainer = null;
+let counttotalDevs = null;
+let allDevs = [];
+let languages = [];
+let countDevs = 0;
+
+window.addEventListener("load", async () => {
+  await getDevsList();
+
+  filterDevs();
+  searchDevs();
 });
 
-const mapsDevs = () => {
-  createDevsCards();
+const getDevsList = async () => {
+  const res = await fetch("http://localhost:3001/devs");
+  const json = await res.json();
+  //console.log(json);
+  allDevs = json.map((dev) => {
+    const { id, name, picture } = dev;
+    return {
+      id,
+      name,
+      picture,
+      language,
+    };
+  });
+
+  /* languages = json.programmingLanguages.map((eachLanguage) => {
+    const { language } = eachLanguage;
+    return { language };
+  }); */
+  createDevCard();
+  totalDevs();
+  console.log(allDevs);
 };
 
-const filterDevs = () => {};
+const createDevCard = () => {
+  cardListContainer = document.querySelector("#cards-container");
+  let devsHTML = "<div class='devs'>";
 
-const searchDevs = () => {};
+  allDevs.forEach((dev) => {
+    const { id, name, picture } = dev;
 
-const createDevsCards = () => {
-  const cardListContainer = document.querySelector("#cards-container");
-  const cardList = document.createElement("ul");
-  cardList.setAttribute("class", "card-list");
-  const cardItem = document.createElement("li");
-  cardItem.setAttribute("class", "card-item");
+    //console.log(programmingLanguages);
+    //let language = programmingLanguages.join(", ");
 
-  cardListContainer.appendChild(cardList);
-  cardList.appendChild(cardItem);
+    /* const languages = (language) => {
+      if (language === "java") {
+        return "./assets/img/language/java.png";
+      }
+      if (language === "javascript") {
+        return "./assets/img/language/javascript.png";
+      }
+      if (language === "python") {
+        return "./assets/img/language/python.png";
+      }
+    }; */
+
+    const cardHTML = `
+      <div id="${id}">
+        <img src='${picture}' alt="${name}">  
+        <h6>${name}</h6>
+        </div>`;
+    devsHTML += cardHTML;
+    //<img src"${languages(language)}" alt="linguagem">
+  });
+  cardListContainer.innerHTML = devsHTML;
 };
 
-const createStatistics = () => {
-  const statisticListContainer = document.querySelector(
-    "#statistics-container"
-  );
-  const statisticList = document.createElement("ul");
-  statisticList.setAttribute("class", "statistic-list");
-  const statisticItem = document.createElement("li");
-  statisticItem.setAttribute("class", "statistic-item");
+const totalDevs = () => {
+  counttotalDevs = document.querySelector("#total-devs");
+  countDevs = document.querySelector("#count-devs");
+};
 
-  statisticListContainer.appendChild(statisticList);
-  statisticList.appendChild(statisticItem);
+const filterDevs = () => {
+  allDevs.filter((dev) => {
+    const { id, name, picture, programmingLanguages } = dev;
+  });
+};
+
+const searchDevs = () => {
+  allDevs.find((dev) => {
+    const { id, name } = dev;
+  });
 };
