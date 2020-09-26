@@ -18,22 +18,16 @@ const getDevsList = async () => {
   const json = await res.json();
   //console.log(json);
   allDevs = json.map((dev) => {
-    const { id, name, picture } = dev;
+    const { id, name, picture, programmingLanguages } = dev;
     return {
       id,
       name,
       picture,
-      language,
+      languages: programmingLanguages,
     };
   });
-
-  /* languages = json.programmingLanguages.map((eachLanguage) => {
-    const { language } = eachLanguage;
-    return { language };
-  }); */
+  //console.log(languages);
   createDevCard();
-  totalDevs();
-  console.log(allDevs);
 };
 
 const createDevCard = () => {
@@ -41,43 +35,43 @@ const createDevCard = () => {
   let devsHTML = "<div class='devs'>";
 
   allDevs.forEach((dev) => {
-    const { id, name, picture } = dev;
-
-    //console.log(programmingLanguages);
-    //let language = programmingLanguages.join(", ");
-
-    /* const languages = (language) => {
-      if (language === "java") {
-        return "./assets/img/language/java.png";
-      }
-      if (language === "javascript") {
-        return "./assets/img/language/javascript.png";
-      }
-      if (language === "python") {
-        return "./assets/img/language/python.png";
-      }
-    }; */
+    const { id, name, picture, languages } = dev;
+    languages.forEach((lang) => {
+      const { language } = lang;
+    });
+    //const { language } = languages;
+    // const languageList = languages.id.join(", ");
 
     const cardHTML = `
-      <div id="${id}">
+      <div id="${id}" class="dev">
         <img src='${picture}' alt="${name}">  
-        <h6>${name}</h6>
-        </div>`;
+        <div class="language-container">
+          <h6>${name}</h6>
+          <div class="language">
+            <img src="./assets/img/language/java.png" alt="java">
+            <img src="./assets/img/language/javascript.png" alt="javascript">
+            <img src="./assets/img/language/python.png" alt="python">
+          </div>
+        </div>
+      </div>
+    `;
     devsHTML += cardHTML;
-    //<img src"${languages(language)}" alt="linguagem">
   });
   cardListContainer.innerHTML = devsHTML;
 };
 
-const totalDevs = () => {
-  counttotalDevs = document.querySelector("#total-devs");
-  countDevs = document.querySelector("#count-devs");
-};
-
 const filterDevs = () => {
-  allDevs.filter((dev) => {
-    const { id, name, picture, programmingLanguages } = dev;
+  const filterAllDevs = allDevs.filter((dev) => {
+    const { id, name, picture, languages } = dev;
+    //console.log("filterDevs", languages);
   });
+
+  const totalDevs = () => {
+    counttotalDevs = document.querySelector("#total-devs");
+    countDevs = document.querySelector("#count-devs");
+    countDevs.textContent = filterAllDevs.length;
+  };
+  totalDevs();
 };
 
 const searchDevs = () => {
