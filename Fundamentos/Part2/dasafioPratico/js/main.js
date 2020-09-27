@@ -1,7 +1,11 @@
 "use strict";
 // Variaveis de estado
 let cardListContainer = null;
-let counttotalDevs = null;
+let onSelectRadioAnd = null;
+let onSelectRadioOr = null;
+let onSelectCheckJava = null;
+let onSelectCheckJavascript = null;
+let onSelectCheckPython = null;
 let allDevs = [];
 let languages = [];
 let countDevs = 0;
@@ -26,7 +30,6 @@ const getDevsList = async () => {
       languages: programmingLanguages,
     };
   });
-  //console.log(languages);
   createDevCard();
 };
 
@@ -38,44 +41,60 @@ const createDevCard = () => {
     const { id, name, picture, languages } = dev;
     languages.forEach((lang) => {
       const { language } = lang;
-    });
-    //const { language } = languages;
-    // const languageList = languages.id.join(", ");
-
-    const cardHTML = `
+      function selectLanguage(devLanguage) {
+        switch (devLanguage) {
+          case "Java":
+            return "./assets/img/language/java.png";
+          case "JavaScript":
+            return "./assets/img/language/javascript.png";
+          case "Python":
+            return "./assets/img/language/python.png";
+          default:
+            return "Linguagem não encontrada!";
+        }
+      }
+      const selectedLanguage = selectLanguage(language);
+      const cardHTML = `
       <div id="${id}" class="dev">
-        <img src='${picture}' alt="${name}">  
+        <img src='${picture}' alt="${name}" class="avatar">  
         <div class="language-container">
           <h6>${name}</h6>
           <div class="language">
-            <img src="./assets/img/language/java.png" alt="java">
-            <img src="./assets/img/language/javascript.png" alt="javascript">
-            <img src="./assets/img/language/python.png" alt="python">
+            <p></p>
+            <img src=${selectedLanguage} alt="java">
           </div>
         </div>
       </div>
     `;
-    devsHTML += cardHTML;
+      devsHTML += cardHTML;
+    });
   });
   cardListContainer.innerHTML = devsHTML;
 };
 
+function checkedLanguages() {
+  selectLanguage(language);
+}
+
 const filterDevs = () => {
-  const filterAllDevs = allDevs.filter((dev) => {
+  const filterDevsByLanguage = allDevs.filter((dev) => {
     const { id, name, picture, languages } = dev;
-    //console.log("filterDevs", languages);
+    onSelectCheckJava = document.querySelector("#java");
+    onSelectCheckJavascript = document.querySelector("#javascript");
+    onSelectCheckPython = document.querySelector("#python");
+    onSelectRadioAnd = document.querySelector("#and");
+    onSelectRadioOr = document.querySelector("#or");
+
+    //onSelectCheckJava.addEventListener("checked", listener);
   });
 
   const totalDevs = () => {
-    counttotalDevs = document.querySelector("#total-devs");
     countDevs = document.querySelector("#count-devs");
-    countDevs.textContent = filterAllDevs.length;
+    countDevs.textContent = filterDevsByLanguage.length || "0";
   };
   totalDevs();
 };
 
-const searchDevs = () => {
-  allDevs.find((dev) => {
-    const { id, name } = dev;
-  });
+const searchDevs = (name) => {
+  //allDevs.find((dev) => dev.toLowerCase().indexOf(name.toLowerCase()) > -1);
 };
