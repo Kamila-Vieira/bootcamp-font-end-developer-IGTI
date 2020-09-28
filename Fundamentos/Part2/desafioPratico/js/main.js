@@ -6,6 +6,8 @@ let onSelectRadioOr = null;
 let onSelectCheckJava = null;
 let onSelectCheckJavascript = null;
 let onSelectCheckPython = null;
+let inputSearch = null;
+let buttonSearch = null;
 let allDevs = [];
 let languages = [];
 let countDevs = 0;
@@ -39,35 +41,29 @@ const createDevCard = () => {
 
   allDevs.forEach((dev) => {
     const { id, name, picture, languages } = dev;
-    languages.forEach((lang) => {
-      const { language } = lang;
-      function selectLanguage(devLanguage) {
-        switch (devLanguage) {
-          case "Java":
-            return "./assets/img/language/java.png";
-          case "JavaScript":
-            return "./assets/img/language/javascript.png";
-          case "Python":
-            return "./assets/img/language/python.png";
-          default:
-            return "Linguagem não encontrada!";
-        }
+    const { language } = languages;
+    const selectLanguage = () => {
+      for (let i = 0; i < languages.length; i++) {
+        return (languages[
+          i
+        ] = `<img src="./assets/img/language/${language}.png" alt="${language}">`);
       }
-      const selectedLanguage = selectLanguage(language);
-      const cardHTML = `
+    };
+
+    const selectedLanguage = selectLanguage(language);
+    console.log(selectedLanguage);
+    const cardHTML = `
       <div id="${id}" class="dev">
         <img src='${picture}' alt="${name}" class="avatar">  
         <div class="language-container">
           <h6>${name}</h6>
           <div class="language">
-            <p></p>
-            <img src=${selectedLanguage} alt="java">
+            ${selectedLanguage}
           </div>
         </div>
       </div>
     `;
-      devsHTML += cardHTML;
-    });
+    devsHTML += cardHTML;
   });
   cardListContainer.innerHTML = devsHTML;
 };
@@ -96,5 +92,20 @@ const filterDevs = () => {
 };
 
 const searchDevs = (name) => {
-  //allDevs.find((dev) => dev.toLowerCase().indexOf(name.toLowerCase()) > -1);
+  inputSearch = document.querySelector(".input-search");
+  buttonSearch = document.querySelector(".button-search");
+  let nameLowerCase = [];
+  allDevs = allDevs.find((dev) => {
+    const { name } = dev;
+    nameLowerCase = name.toLowerCase().indexOf(name.toLowerCase()) > -1;
+    function onButtonPress() {
+      inputSearch.addEventListener("click");
+      if (inputSearch.value === nameLowerCase) {
+        return devsHTML;
+      }
+      return (countDevs.textContent = "0");
+    }
+    buttonSearch.addEventListener("press", onButtonPress);
+  });
+  console.log(nameLowerCase);
 };
