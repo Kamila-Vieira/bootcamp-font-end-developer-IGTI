@@ -1,0 +1,21 @@
+Buscar elementos: 
+const array = ['Bianca', 'Bruna', 'Eduardo', 'Edison' ]
+
+const searchElements = (nameToSearch) => {
+  return array.filter(
+    (arr) => arr.nameToSearch.indexOf(nameToSearch.toString().toLowerCase()) > -1
+  );
+}; 
+  searchElements ('ed');
+
+Remover espaços e acentos:
+function removeAccentsAndSpaces(element) {
+  return element.normalize("NFD").replace(/[^a-zA-Zs]/g, "");
+}
+
+Requisição HTTP (json):
+const fetchDevs = async () => {
+  const res = await fetch("http://localhost:3001/devs");
+  const json = await res.json();
+  console.log(json);
+}
