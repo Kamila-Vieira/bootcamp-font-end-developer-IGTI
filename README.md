@@ -12,12 +12,12 @@ Estudos, desafios e atividades práticas realizadas durante o Bootcamp da IGTI.
 
 **Screenshot (Atividade Prática):**
 
-**Super Calculadora**
+**Super Calculadora**<br/>
 <img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Fundamentos/Screeenshots/img/SuperCalculadoraScreenshot.jpeg" alt="Super Calculadora" width="300"/>
 
 **Screenshot (Desafio Prático):**
 
-**Search Devs**
+**Search Devs**<br/>
 <img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Fundamentos/Screeenshots/img/desafioI.JPG" alt="Search Devs" width="300"/>
 <img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Fundamentos/Screeenshots/img/desafioII.JPG" alt="Search Devs"300"/>
 
