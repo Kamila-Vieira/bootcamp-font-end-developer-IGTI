@@ -1,0 +1,11 @@
+<h3>Componente C1</h3>
+
+<p>Tamanho <input type="number" [(ngModel)]="boxSize" /></p>
+
+<div>
+  <div [class.box]="true" [class.borderRed]="true"></div>
+  <div class="box"></div>
+  <div class="box" [style.width.px]="boxSize"></div>
+</div>
+
+<c2></c2>

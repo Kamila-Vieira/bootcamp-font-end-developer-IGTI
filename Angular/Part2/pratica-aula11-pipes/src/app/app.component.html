@@ -1,0 +1,17 @@
+<h3>Pipes</h3>
+<p>Texto: {{text}}</p>
+<p>Texto: {{text | lowercase}}</p>
+<p>Texto: {{text | uppercase}}</p>
+<p>N: {{n}}</p>
+<p>N formatado: {{n | number:'8.0-0'}}</p>
+<p>Hoje: {{hoje}}</p>
+<p>Hoje formatado: {{hoje | date:'short'}}</p>
+<p>CEP: {{meuCep | cep}}</p>
+<p>CPF: {{meuCpf | cpf:3}}</p>
+
+<h3>Impure pipe</h3>
+<input #ipt placeholder="Uma string"><button (click)="addString(ipt.value)">+</button>
+<ul>
+  <li *ngFor="let s of strings">{{s}}</li>
+</ul>
+<p>Array formatado: {{strings | joinStrings:', '}}</p>

@@ -1,0 +1,17 @@
+
+form {
+    padding: 0 16px;
+}
+
+.preco {
+    width: 6em;
+    margin: 0 16px;
+}
+
+table {
+    width: 100%;
+}
+
+.mat-column-preco, .mat-column-acoes {
+    text-align: right;
+}

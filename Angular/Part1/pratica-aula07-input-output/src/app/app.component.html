@@ -1,0 +1,18 @@
+<panel title="Filmes">
+  <table>
+    <tr>
+      <th>Título</th>
+      <th>Nota</th>
+    </tr>
+    <tr *ngFor="let movie of movies">
+      <td>{{movie.title}}</td>
+      <td>
+        <app-rating 
+          [(rating)]="movie.rating">
+        </app-rating></td>
+    </tr>
+  </table>
+</panel>
+<panel title="Séries">
+  <p>Painel 2</p>
+</panel>

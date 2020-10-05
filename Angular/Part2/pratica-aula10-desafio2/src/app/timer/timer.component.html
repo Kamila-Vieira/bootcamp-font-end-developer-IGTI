@@ -1,0 +1,18 @@
+<div [class]="'phase' + ts.phase">
+    <div class="timeLeft">{{ts.timeLeft / 1000 | number:'1.1-1'}}</div>
+    <div>
+        Exercício {{ts.currentEx + 1}}/{{ts.exercises.length}}: {{ts.exercises[ts.currentEx].name}}
+    </div>
+    <div>
+        Repetição {{ts.currentRep + 1}}/{{ts.exercises[ts.currentEx].repetitions}}
+    </div>
+    <div>
+        {{formatPhase(ts.phase)}}
+    </div>
+</div>
+<div class="tools">
+    <button (click)="start()">Iniciar</button>
+    <button (click)="pause()">Pausar</button>
+    <button (click)="restart()">Reiniciar</button>
+    <button (click)="next()">Próximo</button>
+</div>

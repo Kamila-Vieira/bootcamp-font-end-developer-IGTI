@@ -1,0 +1,11 @@
+<h3>Routing</h3>
+
+<ul>
+    <li><a routerLink="/page1" routerLinkActive="active">Page 1</a></li>
+    <li><a routerLink="/page2/1" routerLinkActive="active">Page 2 (id=1)</a></li>
+    <li><a routerLink="/page2/2" routerLinkActive="active">Page 2 (id=2)</a></li>
+</ul>
+
+<button (click)="goToPage2()">Ir para Page 2</button>
+
+<router-outlet></router-outlet>

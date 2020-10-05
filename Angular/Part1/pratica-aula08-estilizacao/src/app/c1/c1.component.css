@@ -1,0 +1,12 @@
+.box {
+    background-color: hotpink;
+}
+
+.borderRed {
+    border-color: red;
+}
+
+:host {
+    display: block;
+    border: 2px solid green;
+}

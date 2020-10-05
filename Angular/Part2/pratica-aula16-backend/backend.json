@@ -1,0 +1,29 @@
+{
+  "produtos": [
+    {
+      "id": 2,
+      "nome": "X-Búrguer",
+      "preco": 10.5
+    },
+    {
+      "id": 4,
+      "nome": "X-Picanha",
+      "preco": 14.5
+    },
+    {
+      "id": 5,
+      "nome": "Coca cola lata",
+      "preco": 5.5
+    },
+    {
+      "nome": "Cerveja Skol",
+      "preco": 7.5,
+      "id": 6
+    },
+    {
+      "nome": "X-Picanha",
+      "preco": 20.5,
+      "id": 8
+    }
+  ]
+}

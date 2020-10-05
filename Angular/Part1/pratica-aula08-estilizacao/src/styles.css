@@ -1,0 +1,13 @@
+
+body {
+    font-family: Arial;
+}
+
+.box {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-color: aqua;
+    border: 2px solid grey;
+    margin-right: 1rem;
+}
