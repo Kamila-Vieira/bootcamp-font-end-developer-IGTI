@@ -13,9 +13,9 @@ Estudos, desafios e atividades práticas realizadas durante o Bootcamp da IGTI.
 
 **Screenshot (Atividade Prática):**
 
-<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Fundamentos/Screeenshots/img/SuperCalculadoraScreenshot.jpeg" alt="Screenshot da aplicação prática do módulo 1" width="200"/>
+<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Fundamentos/Screeenshots/img/SuperCalculadoraScreenshot.jpeg" alt="Screenshot da aplicação prática do módulo 1" width="300"/>
 
 **Screenshot (Desafio Prático):**
 
-<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Fundamentos/Screeenshots/img/desafioI.JPG" alt="Screenshot do desafio prático do módulo 1" width="200"/>
-<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Fundamentos/Screeenshots/img/desafioII.JPG" alt="Screenshot do desafio prático do módulo 1" width="200"/>
+<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Fundamentos/Screeenshots/img/desafioI.JPG" alt="Screenshot do desafio prático do módulo 1" width="300"/>
+<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Fundamentos/Screeenshots/img/desafioII.JPG" alt="Screenshot do desafio prático do módulo 1" width="300"/>
