@@ -4,7 +4,7 @@ Estudos, desafios e atividades práticas realizadas durante o Bootcamp da IGTI.
 
 ### Sobre o Bootcamp IGTI
 
-####**_Módulo 1 - Fundamentos_**
+#### **_Módulo 1 - Fundamentos_**
 
 > - [Apostila](https://drive.google.com/file/d/1dwTGBVSNEy7TQLMuYC9QJnZEJuWXkvSl/view?usp=sharing) do módulo 1.<br/>
 > - [Atividade Pratica](https://drive.google.com/file/d/1Mma-dpwMZTo_YqmhZV8WOm5gpcKEg_0h/view?usp=sharing) do módulo 1 (Enunciado).<br/>
@@ -21,7 +21,7 @@ Estudos, desafios e atividades práticas realizadas durante o Bootcamp da IGTI.
 <img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Fundamentos/Screeenshots/img/desafioI.JPG" alt="Search Devs" width="300"/>
 <img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Fundamentos/Screeenshots/img/desafioII.JPG" alt="Search Devs" width="300"/>
 
-####**_Módulo 2 - Angular_**
+#### **_Módulo 2 - Angular_**
 
 > - [Apostila](https://drive.google.com/file/d/1MlyJ1bA2Q7aNwDbm87bI-6wXfPrKKORC/view?usp=sharing) do módulo 2.<br/>
 > - [Atividade Pratica](https://drive.google.com/file/d/1djrctL04x7MLhG6ZsDcfB2CS_TS_w20D/view?usp=sharing) do módulo 2 (Enunciado).<br/>
