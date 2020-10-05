@@ -1,0 +1,21 @@
+img {
+  width: 500px;
+  margin: 20px 320px;
+  border: 2px solid salmon;
+}
+
+.title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(212, 186, 40);
+}
+
+.button-container {
+  text-align: center;
+}
+
+.material-icons {
+  color: rgb(212, 186, 40);
+  cursor: pointer;
+}
