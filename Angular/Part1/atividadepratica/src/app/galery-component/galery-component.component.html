@@ -3,18 +3,21 @@
 <ng-container class="container" *ngIf="!(fotos.length === 0)">
   <div class="galery">
     <img [src]="fotos[currentImg]" />
+    <p class="switchPicture">
+      Foto {{ showCurrentPicture() }} de {{ fotos.length }}
+    </p>
   </div>
   <div class="button-container">
-    <button [disabled]="currentImg == 0" (click)="primeira()">
+    <button [disabled]="currentImg == 0" (click)="firstPicture()">
       <span class="material-icons">skip_previous</span>
     </button>
-    <button [disabled]="currentImg == 0" (click)="ante()">
+    <button [disabled]="currentImg == 0" (click)="prevPicture()">
       <span class="material-icons">keyboard_arrow_left</span>
     </button>
-    <button [disabled]="currentImg == 4" (click)="prox()">
+    <button [disabled]="currentImg == fotos.length - 1" (click)="nextPicture()">
       <span class="material-icons">keyboard_arrow_right</span>
     </button>
-    <button [disabled]="currentImg == 4" (click)="ultima()">
+    <button [disabled]="currentImg == fotos.length - 1" (click)="lastPicture()">
       <span class="material-icons">skip_next</span>
     </button>
   </div>

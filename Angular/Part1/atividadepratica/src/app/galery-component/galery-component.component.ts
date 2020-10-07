@@ -9,19 +9,33 @@ export class GaleryComponentComponent {
   @Input() titulo: string = '';
   @Input() fotos: string[] = [];
   currentImg: number = 0;
-  prox() {
+  numberToShow: number = 0;
+
+  nextPicture() {
     this.currentImg++;
   }
-  ante() {
+  prevPicture() {
     this.currentImg--;
   }
-  primeira() {
+  firstPicture() {
     this.currentImg = 0;
   }
-  ultima() {
+  lastPicture() {
     this.currentImg = 4;
   }
-  disabledButton() {
-    this.currentImg - 1;
+  showCurrentPicture() {
+    if (this.currentImg == 0) {
+      return 1;
+    } else if (this.currentImg == 1) {
+      return 2;
+    } else if (this.currentImg == 2) {
+      return 3;
+    } else if (this.currentImg == 3) {
+      return 4;
+    } else if (this.currentImg == 4) {
+      return 5;
+    } else {
+      return;
+    }
   }
 }

@@ -6,6 +6,7 @@
   width: 500px;
   margin: 20px 0px;
   border: 2px solid salmon;
+  max-width: 500px;
 }
 
 .title {
@@ -27,6 +28,12 @@
 
 .nonePicture {
   text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+}
+
+.switchPicture {
   font-size: 15px;
   font-weight: bold;
   color: white;
