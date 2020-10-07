@@ -3,9 +3,7 @@
 <ng-container class="container" *ngIf="!(fotos.length === 0)">
   <div class="galery">
     <img [src]="fotos[currentImg]" />
-    <p class="switchPicture">
-      Foto {{ showCurrentPicture() }} de {{ fotos.length }}
-    </p>
+    <p class="switchPicture">Foto {{ currentImg + 1 }} de {{ fotos.length }}</p>
   </div>
   <div class="button-container">
     <button [disabled]="currentImg == 0" (click)="firstPicture()">
