@@ -29,8 +29,10 @@ Estudos, desafios e atividades práticas realizadas durante o Bootcamp da IGTI.
 
 **Screenshot (Atividade Prática):**
 
-<img src="" alt="Screenshot da aplicação prática do módulo 2" width="300"/>
+**Galeria de Fotos**<br/>
+<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Angular/Screenshots/screenshot-atv-pratica.PNG" alt="Galeria de Fotos" width="300"/>
 
 **Screenshot (Desafio Prático):**
 
+**???**<br/>
 <img src="" alt="Screenshot do desafio prático do módulo 2" width="300"/>
