@@ -1,5 +1,13 @@
-<app-galery-component></app-galery-component>
-<!-- (click)="firstPicture()"
-(click)="prevPicture()"
-(click)="nextPicture()"
-(click)="lastPicture()" -->
+<app-galery-component
+  [titulo]="'#BlackLivesMetter'"
+  [fotos]="[
+    '../assets/judeus-samson-GgKY8sDpCD8-unsplash.jpg',
+    '../assets/kalea-morgan--R3pWoWJmTY-unsplash.jpg',
+    '../assets/kalea-morgan-8YD07wqgxuc-unsplash.jpg',
+    '../assets/parker-johnson-bOzxlKTz7To-unsplash.jpg',
+    '../assets/parker-johnson-M7Tw_7GK6HM-unsplash.jpg'
+  ]"
+>
+</app-galery-component>
+<app-galery-component [titulo]="'Fotos maneiras'" [fotos]="[]">
+</app-galery-component>

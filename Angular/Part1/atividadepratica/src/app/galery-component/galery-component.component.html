@@ -1,14 +1,21 @@
 <p class="title">{{ titulo }}</p>
-<div>
-  <img src="{{ fotos[0] }}" alt="oi" />
-  <img src="{{ fotos[1] }}" alt="oi" />
-  <img src="{{ fotos[2] }}" alt="oi" />
-  <img src="{{ fotos[3] }}" alt="oi" />
-  <img src="{{ fotos[4] }}" alt="oi" />
-</div>
-<div class="button-container">
-  <span class="material-icons">fast_rewind</span>
-  <span class="material-icons">keyboard_arrow_left</span>
-  <span class="material-icons">keyboard_arrow_right</span>
-  <span class="material-icons">fast_forward</span>
-</div>
+<div class="nonePicture" *ngIf="fotos.length === 0">Nenhuma Imagem</div>
+<ng-container class="container" *ngIf="!(fotos.length === 0)">
+  <div class="galery">
+    <img [src]="fotos[currentImg]" />
+  </div>
+  <div class="button-container">
+    <button [disabled]="currentImg == 0" (click)="primeira()">
+      <span class="material-icons">skip_previous</span>
+    </button>
+    <button [disabled]="currentImg == 0" (click)="ante()">
+      <span class="material-icons">keyboard_arrow_left</span>
+    </button>
+    <button [disabled]="currentImg == 4" (click)="prox()">
+      <span class="material-icons">keyboard_arrow_right</span>
+    </button>
+    <button [disabled]="currentImg == 4" (click)="ultima()">
+      <span class="material-icons">skip_next</span>
+    </button>
+  </div>
+</ng-container>

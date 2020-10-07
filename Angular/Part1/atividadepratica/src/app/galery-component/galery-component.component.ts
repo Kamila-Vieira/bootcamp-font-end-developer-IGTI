@@ -6,13 +6,22 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./galery-component.component.css'],
 })
 export class GaleryComponentComponent {
-  @Input() titulo: string = '#BlackLivesMetter';
-
-  @Input() fotos: string[] = [
-    '../assets/img/judeus-samson-GgKY8sDpCD8-unsplash.jpg',
-    '../assets/img/kalea-morgan--R3pWoWJmTY-unsplash.jpg',
-    '../assets/img/kalea-morgan-8YD07wqgxuc-unsplash.jpg',
-    '../assets/img/parker-johnson-bOzxlKTz7To-unsplash.jpg',
-    '../assets/img/parker-johnson-M7Tw_7GK6HM-unsplash.jpg',
-  ];
+  @Input() titulo: string = '';
+  @Input() fotos: string[] = [];
+  currentImg: number = 0;
+  prox() {
+    this.currentImg++;
+  }
+  ante() {
+    this.currentImg--;
+  }
+  primeira() {
+    this.currentImg = 0;
+  }
+  ultima() {
+    this.currentImg = 4;
+  }
+  disabledButton() {
+    this.currentImg - 1;
+  }
 }

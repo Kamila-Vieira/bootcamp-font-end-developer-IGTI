@@ -1,6 +1,10 @@
-img {
+.galery {
+  text-align: center;
+}
+
+.galery img {
   width: 500px;
-  margin: 20px 320px;
+  margin: 20px 0px;
   border: 2px solid salmon;
 }
 
@@ -13,9 +17,17 @@ img {
 
 .button-container {
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 .material-icons {
   color: rgb(212, 186, 40);
   cursor: pointer;
+}
+
+.nonePicture {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
 }
