@@ -13,13 +13,13 @@ Estudos, desafios e atividades práticas realizadas durante o Bootcamp da IGTI.
 **Screenshot (Atividade Prática):**
 
 **Super Calculadora**<br/>
-<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Fundamentos/Screeenshots/img/SuperCalculadoraScreenshot.jpeg" alt="Super Calculadora" width="300"/>
+<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Fundamentos/Screeenshots/img/SuperCalculadoraScreenshot.jpeg" alt="Super Calculadora" width="500"/>
 
 **Screenshot (Desafio Prático):**
 
 **Search Devs**<br/>
-<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Fundamentos/Screeenshots/img/desafioI.JPG" alt="Search Devs" width="300"/>
-<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Fundamentos/Screeenshots/img/desafioII.JPG" alt="Search Devs" width="300"/>
+<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Fundamentos/Screeenshots/img/desafioI.JPG" alt="Search Devs" width="500"/>
+<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Fundamentos/Screeenshots/img/desafioII.JPG" alt="Search Devs" width="500"/>
 
 #### **_Módulo 2 - Angular_**
 
@@ -30,9 +30,9 @@ Estudos, desafios e atividades práticas realizadas durante o Bootcamp da IGTI.
 **Screenshot (Atividade Prática):**
 
 **Galeria de Fotos**<br/>
-<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Angular/Screenshots/screenshot-atv-pratica.PNG" alt="Galeria de Fotos" width="300"/>
+<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Angular/Screenshots/screenshot-atv-pratica.PNG" alt="Galeria de Fotos" width="500"/>
 
 **Screenshot (Desafio Prático):**
 
 **???**<br/>
-<img src="" alt="Screenshot do desafio prático do módulo 2" width="300"/>
+<img src="" alt="Screenshot do desafio prático do módulo 2" width="500"/>
