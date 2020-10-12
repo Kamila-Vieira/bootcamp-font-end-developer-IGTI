@@ -1,0 +1,15 @@
+table {
+  width: 100%;
+}
+
+mat-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+mat-card {
+  font-weight: bold;
+  font-size: 100%;
+  border-bottom: 1px solid black;
+}
