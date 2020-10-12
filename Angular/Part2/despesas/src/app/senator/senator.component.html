@@ -1,9 +1,9 @@
 <mat-toolbar color="primary">
   <span>Despesas dos senadores (2019)</span>
 </mat-toolbar>
-<mat-nav-list>
-  <mat-list-item>
-    <a matLine routerLink="/despesasenador/2">Item 2</a>
-  </mat-list-item>
+<mat-nav-list *ngFor="let senator of senators">
+  <a matLine [routerLink]="['/despesassenador/', senator.id]">
+    <mat-list-item>{{ senator.nomeSenador }}</mat-list-item>
+  </a>
   <mat-divider></mat-divider>
 </mat-nav-list>

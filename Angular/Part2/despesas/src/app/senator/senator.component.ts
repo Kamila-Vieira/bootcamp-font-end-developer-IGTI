@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Senator, SenatorsService } from '../senators.service';
 
 @Component({
   selector: 'app-senator',
@@ -6,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./senator.component.css'],
 })
 export class SenatorComponent implements OnInit {
-  constructor() {}
+  constructor(private senatorService: SenatorsService) {}
+  senators: Senator[] = [];
+  ngOnInit(): void {
+    this.senatorService.listSenators().subscribe((senators) => {
+      this.senators = senators;
+    });
+  }
 
-  ngOnInit(): void {}
-
-  showSenator() {
+  showSenator(id: number) {
     'senadores/:id';
   }
 }

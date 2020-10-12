@@ -13,3 +13,17 @@ mat-card {
   font-size: 100%;
   border-bottom: 1px solid black;
 }
+
+mat-toolbar {
+  justify-content: space-between;
+}
+
+mat-toolbar button {
+  background: none;
+  border: none;
+}
+
+.material-icons {
+  margin-right: 7rem;
+  color: white;
+}

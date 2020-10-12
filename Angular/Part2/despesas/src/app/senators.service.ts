@@ -17,8 +17,7 @@ export interface SenatorExpanses {
     ano: number,
     mes: number,
     dia: number,
-    valor: number,
-    total: number
+    valor: number
   ];
 }
 
@@ -33,7 +32,7 @@ export class SenatorsService {
   }
 
   retrieveSenator(id: number) {
-    return this.http.get<SenatorExpanses>(`${URLBase}/despesassenador/${id}`);
+    return this.http.get<SenatorExpanses>(`${URLBase}/despesasSenadores/${id}`);
   }
 
   totalExpanses(senator: SenatorExpanses) {

@@ -1,11 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
+import { Senator, SenatorExpanses, SenatorsService } from '../senators.service';
 
 @Component({
   selector: 'app-senator-expenses',
@@ -13,11 +7,19 @@ export interface PeriodicElement {
   styleUrls: ['./senator-expenses.component.css'],
 })
 export class SenatorExpensesComponent implements OnInit {
-  despesa: string = 'Aluguel';
-  valor: number = 123.45;
-  constructor() {}
+  constructor(private senatorService: SenatorsService) {}
 
-  ngOnInit(): void {}
+  senatorExpanses: SenatorExpanses[] = [];
+  senator: Senator[] = [];
+
+  ngOnInit(): void {
+    this.senatorService.retrieveSenator(6).subscribe((senatorExpanses) => {
+      let test = this.senatorExpanses.push(senatorExpanses);
+      return console.log(test);
+    });
+  }
+
+  retrieveSenator() {}
 
   countTotalExpensesPerSenator(id) {}
 }
