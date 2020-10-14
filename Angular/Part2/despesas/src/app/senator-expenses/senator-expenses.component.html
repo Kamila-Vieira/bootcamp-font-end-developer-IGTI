@@ -1,14 +1,26 @@
 <mat-toolbar color="primary">
-  <span>Despesas dos senadores (2019) - Kamila Almeida</span>
+  <span>Despesas dos senadores (2019) - {{ senatorName }}</span>
   <a routerLink="/senadores">
     <span class="material-icons">arrow_right_alt</span>
   </a>
 </mat-toolbar>
 <mat-card>Resumo de despesas</mat-card>
 <ng-container>
-  <mat-list role="list">
-    <mat-list-item role="listitem">{{ despesa }}</mat-list-item>
-    <mat-list-item role="listitem">R$ {{ valor }}</mat-list-item>
+  <ng-container *ngFor="let e of expanses">
+    <mat-list role="list">
+      <mat-list-item role="listitem">{{ expensesTypes(e.tipo) }}</mat-list-item>
+      <mat-list-item role="listitem" class="value">
+        R$ {{ e.valor | number: "1.1-2" }}
+      </mat-list-item>
+    </mat-list>
+    <mat-divider></mat-divider>
+  </ng-container>
+
+  <mat-list role="list" class="total-container">
+    <mat-list-item role="listitem">Total: </mat-list-item>
+    <mat-list-item role="listitem">
+      R$ {{ countTotalExpensesPerSenator() | number: "1.1-2" }}
+    </mat-list-item>
     <mat-divider></mat-divider>
   </mat-list>
 </ng-container>

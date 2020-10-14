@@ -27,3 +27,12 @@ mat-toolbar button {
   margin-right: 7rem;
   color: white;
 }
+
+.total-container {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.value {
+  text-align: right;
+}

@@ -7,18 +7,18 @@ export interface Senator {
   id: number;
   nomeSenador: string;
 }
-
+export interface Expanses {
+  tipo: number;
+  fornec: string;
+  ano: number;
+  mes: number;
+  dia: number;
+  valor: number;
+}
 export interface SenatorExpanses {
   id: number;
   nomeSenador: string;
-  despesas: [
-    tipo: number,
-    fornec: string,
-    ano: number,
-    mes: number,
-    dia: number,
-    valor: number
-  ];
+  despesas: Expanses[];
 }
 
 @Injectable({
@@ -33,12 +33,5 @@ export class SenatorsService {
 
   retrieveSenator(id: number) {
     return this.http.get<SenatorExpanses>(`${URLBase}/despesasSenadores/${id}`);
-  }
-
-  totalExpanses(senator: SenatorExpanses) {
-    return this.http.put<SenatorExpanses>(
-      `${URLBase}/despesassenador/${senator.id}`,
-      senator
-    );
   }
 }

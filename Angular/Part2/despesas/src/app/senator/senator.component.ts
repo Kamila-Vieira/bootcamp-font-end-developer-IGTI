@@ -14,8 +14,4 @@ export class SenatorComponent implements OnInit {
       this.senators = senators;
     });
   }
-
-  showSenator(id: number) {
-    'senadores/:id';
-  }
 }

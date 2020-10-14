@@ -8,7 +8,6 @@ const routes: Routes = [
   { path: 'despesassenador/:id', component: SenatorExpensesComponent },
   { path: '', redirectTo: 'senadores', pathMatch: 'full' },
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
