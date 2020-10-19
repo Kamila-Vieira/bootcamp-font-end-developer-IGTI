@@ -34,5 +34,23 @@ Estudos, desafios e atividades práticas realizadas durante o Bootcamp da IGTI.
 
 **Screenshot (Desafio Prático):**
 
+**Despesas**<br/>
+<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Angular/Screenshots/despesasI.png" alt="Lista de senadores" width="500"/>
+<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Angular/Screenshots/despesasII.png" alt="Despesas" width="500"/>
+
+#### **_Módulo 3 - React_**
+
+> - [Apostila](https://drive.google.com/file/d/1B5EdBhPKUZlvBEiqBG4Y3IlGfByHjaVE/view?usp=sharing) do módulo 3.<br/>
+> - [Atividade Pratica](https://drive.google.com/file/d/1kXtLbPTxZ6w1Y3YgZzE91bAW1n3_At-0/view?usp=sharing) do módulo 3 (Enunciado).<br/>
+> - [Desafio Pratico](https://drive.google.com/file/d/1GiIbvahnaD-rWBKnumwM8feALwRBnhuW/view?usp=sharing) do módulo 3 (Enunciado).<br/>
+
+**Screenshot (Atividade Prática):**
+
 **???**<br/>
-<img src="" alt="Screenshot do desafio prático do módulo 2" width="500"/>
+<img src="" alt="Screenshot da atividade prática do módulo 3" width="500"/>
+
+**Screenshot (Desafio Prático):**
+
+**???**<br/>
+<img src="" alt="Screenshot do desafio prático do módulo 3" width="500"/>
+
