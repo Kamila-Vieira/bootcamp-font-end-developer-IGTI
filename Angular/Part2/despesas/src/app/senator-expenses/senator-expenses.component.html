@@ -5,22 +5,60 @@
   </a>
 </mat-toolbar>
 <mat-card>Resumo de despesas</mat-card>
-<ng-container>
-  <ng-container *ngFor="let e of expanses">
-    <mat-list role="list">
-      <mat-list-item role="listitem">{{ expensesTypes(e.tipo) }}</mat-list-item>
-      <mat-list-item role="listitem" class="value">
-        R$ {{ e.valor | number: "1.1-2" }}
-      </mat-list-item>
-    </mat-list>
-    <mat-divider></mat-divider>
+<table mat-table [dataSource]="expensesPerType">
+  <ng-container matColumnDef="tipo">
+    <th mat-header-cell *matHeaderCellDef>Tipo de despesa</th>
+    <td mat-cell *matCellDef="let expensePerType">
+      {{ expensePerType.tipo }} -
+      {{ expensesTypes(expensePerType.tipo) }}
+    </td>
+    <td mat-footer-cell *matFooterCellDef class="total-container">Total:</td>
+  </ng-container>
+  <ng-container matColumnDef="total">
+    <th mat-header-cell *matHeaderCellDef>Valor</th>
+    <td mat-cell *matCellDef="let expensePerType">
+      R$ {{ expensePerType.total | number: "1.2-2" }}
+    </td>
+    <td mat-footer-cell *matFooterCellDef class="total-container">
+      R$ {{ countTotalExpensesPerSenator() | number: "1.2-2" }}
+    </td>
+  </ng-container>
+  <tr mat-row *matRowDef="let row; columns: ['tipo', 'total']"></tr>
+  <tr mat-footer-row *matFooterRowDef="['tipo', 'total']"></tr>
+</table>
+<mat-card>Despesas</mat-card>
+<table mat-table [dataSource]="expenses" id="second-table">
+  <ng-container matColumnDef="tipo">
+    <th mat-header-cell *matHeaderCellDef class="title-container">Tipo</th>
+    <td mat-cell *matCellDef="let expense">{{ expense.tipo }}</td>
+  </ng-container>
+  <ng-container matColumnDef="fornec">
+    <th mat-header-cell *matHeaderCellDef class="title-container">
+      Fornecedor
+    </th>
+    <td mat-cell *matCellDef="let expense">{{ expense.fornec }}</td>
+  </ng-container>
+  <ng-container matColumnDef="data">
+    <th mat-header-cell *matHeaderCellDef class="title-container">Data</th>
+    <td mat-cell *matCellDef="let expense">
+      {{ expense.dia | number: "2.0-0" }}/{{ expense.mes | number: "2.0-0" }}/{{
+        expense.ano
+      }}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="valor">
+    <th mat-header-cell *matHeaderCellDef class="title-container">Valor</th>
+    <td mat-cell *matCellDef="let expense">
+      R$ {{ expense.valor | number: "1.1-2" }}
+    </td>
   </ng-container>
 
-  <mat-list role="list" class="total-container">
-    <mat-list-item role="listitem">Total: </mat-list-item>
-    <mat-list-item role="listitem">
-      R$ {{ countTotalExpensesPerSenator() | number: "1.1-2" }}
-    </mat-list-item>
-    <mat-divider></mat-divider>
-  </mat-list>
-</ng-container>
+  <tr
+    mat-header-row
+    *matHeaderRowDef="['tipo', 'fornec', 'data', 'valor']"
+  ></tr>
+  <tr
+    mat-row
+    *matRowDef="let row; columns: ['tipo', 'fornec', 'data', 'valor']"
+  ></tr>
+</table>

@@ -29,10 +29,15 @@ mat-toolbar button {
 }
 
 .total-container {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 
-.value {
-  text-align: right;
+.title-container {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#second-table {
+  margin-bottom: 2rem;
 }

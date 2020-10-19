@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {
-  SenatorExpanses,
+  SenatorExpenses,
   SenatorsService,
-  Expanses,
+  Expenses,
 } from '../senators.service';
 
 @Component({
@@ -12,28 +12,26 @@ import {
   styleUrls: ['./senator-expenses.component.css'],
 })
 export class SenatorExpensesComponent implements OnInit {
-  despesa: string = '';
-  valor: number = 1234.5678;
-
   constructor(
     private route: ActivatedRoute,
     private senatorService: SenatorsService
   ) {}
 
   senatorName: string = '';
-  senatorExpanses: SenatorExpanses[] = [];
-  expanses: Expanses[] = [];
+  senatorExpanses: SenatorExpenses[] = [];
+  expenses: Expenses[] = [];
+  expensesPerType: { tipo: number; total: number }[] = [];
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((paramMap) => {
       const id = parseInt(paramMap.get('id'));
       this.senatorService.retrieveSenator(id).subscribe((senator) => {
-        this.expanses = senator.despesas;
+        this.expenses = senator.despesas;
         this.senatorName = senator.nomeSenador;
+        this.expensesPerType = totalValuePerTypeOfExpense(this.expenses);
       });
     });
   }
-
   expensesTypes(type: number) {
     if (type === 1) {
       return 'Aluguel de imóveis e despesas concernentes a eles';
@@ -53,19 +51,21 @@ export class SenatorExpensesComponent implements OnInit {
       return '';
     }
   }
-
-  totalValuePerTypeOfExpense() {
-    /* for (let i = 1; i <= 7; i++) {
-      const total = expanses
-        .filter((despesa) => despesa.tipo === i)
-        .reduce((total, despesa) => total + despesa.valor, 0);
-      return total;
-    } */
-    this.expanses.forEach((ex) => {
-      if (ex.tipo === ex.tipo) {
-      }
-    });
+  countTotalExpensesPerSenator(): number {
+    return this.expensesPerType.reduce(
+      (expense, next) => expense + next.total,
+      0
+    );
   }
+}
 
-  countTotalExpensesPerSenator() {}
+function totalValuePerTypeOfExpense(expenses: Expenses[]) {
+  let result: { tipo: number; total: number }[] = [];
+  for (let i = 1; i <= 7; i++) {
+    const totalValue = expenses
+      .filter((despesa) => despesa.tipo === i)
+      .reduce((total, despesa) => total + despesa.valor, 0);
+    result[i - 1] = { tipo: i, total: totalValue };
+  }
+  return result;
 }
