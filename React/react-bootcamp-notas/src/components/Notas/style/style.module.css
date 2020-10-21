@@ -1,0 +1,26 @@
+.main {
+  display: flex;
+  justify-content: space-around;
+  margin: 5rem 8rem;
+}
+
+.grades_container {
+  border: solid 1px black;
+  padding: 0rem 3rem;
+  height: 15rem;
+}
+
+.grade_Item {
+  display: flex;
+  align-items: center;
+}
+
+.grade_Item p {
+  margin-right: 1rem;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.grade_Item span {
+  font-size: 14px;
+}
