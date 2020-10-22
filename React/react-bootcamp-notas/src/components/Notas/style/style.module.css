@@ -24,3 +24,13 @@
 .grade_Item span {
   font-size: 14px;
 }
+
+.approved {
+  color: green;
+  font-weight: bold;
+}
+
+.disapproved {
+  color: red;
+  font-weight: bold;
+}
