@@ -54,3 +54,19 @@ Estudos, desafios e atividades práticas realizadas durante o Bootcamp da IGTI.
 **???**<br/>
 <img src="" alt="Screenshot do desafio prático do módulo 3" width="500"/>
 
+#### **_Módulo 4 - Vue_**
+
+> - [Apostila](https://drive.google.com/file/d/1TpdV-5gRF0MRtdBpreqeRq_KUp4_6SyP/view?usp=sharing) do módulo 4.<br/>
+> - [Atividade Pratica](https://drive.google.com/file/d/1Ua4gyaDNH-ljoiqpf4IL6KWp4LgHj_q4/view?usp=sharing) do módulo 4 (Enunciado).<br/>
+> - [Desafio Pratico](https://drive.google.com/file/d/1RMuJc207zrbfWF15eKKW5kwUfbVsaXiY/view?usp=sharing) do módulo 4 (Enunciado).<br/>
+
+**Screenshot (Atividade Prática):**
+
+**???**<br/>
+<img src="" alt="Screenshot da atividade prática do módulo 3" width="500"/>
+
+**Screenshot (Desafio Prático):**
+
+**???**<br/>
+<img src="" alt="Screenshot do desafio prático do módulo 3" width="500"/>
+
