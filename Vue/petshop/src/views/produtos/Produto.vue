@@ -1,14 +1,14 @@
 <template>
   <div>
-    <h1>Um produto</h1>
-    <!-- <div>
-      <div v-for="(produto) in produtos" :key="produto.id" @click="irParaProduto(produto.id)">
-        <img :src="produto.foto" alt="">
-        <h4>{{ produto.nome }}</h4>
+    <router-link :to="'/ecommerce'"><p>Voltar</p></router-link>
+    <div v-for="(produto) in produtos" :key="produto.id"  class="produto">
+      <div v-if="produto.id === detalheProduto ? produto : ''">
+        <img :src="produto.foto" :alt="produto.nome">
+        <h1>{{ produto.nome }}</h1>
         <span>{{ produto.preco | valorMonetario}}</span>
         <p>{{ produto.descricao }}</p>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -18,8 +18,12 @@ import axios from 'axios';
 export default {
   data(){
     return {
+      detalheProduto: 'detalhe do produto',
       produtos: []
     }
+  },
+  mounted(){
+    this.detalheProduto = this.$route.params.id;
   },
   async created() {
     this.produtos = await this.buscarProdutos();

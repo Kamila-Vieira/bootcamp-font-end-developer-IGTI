@@ -1,6 +1,8 @@
 <template>
   <div id="page">
-    <h3 @click="irParaHome">Home</h3>
+    <div class="flex">
+      <h3 @click="irParaHome">Home</h3> | <h3 @click="irParaPetshop">Petshop</h3> | <h3 @click="irParaLoja">Loja</h3>
+    </div>
     <router-view/>
   </div>
 </template>
@@ -11,6 +13,12 @@ export default {
   methods: {
     irParaHome(){
       this.$router.push('/');
+    },
+    irParaPetshop(){
+      this.$router.push('/petshop');
+    },
+    irParaLoja(){
+      this.$router.push('/ecommerce');
     }
   }
 }
@@ -23,6 +31,15 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 35rem;
+  color: #446a91;
+  cursor: pointer;
 }
 
 </style>
