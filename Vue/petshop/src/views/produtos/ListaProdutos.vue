@@ -5,15 +5,31 @@
     </h1>
     <div class="produtos">
       <div v-for="(produto) in produtos" :key="produto.id"  class="produto">
-        <img :src="produto.foto" :alt="produto.nome">
-        <router-link :to="`/ecommerce/${produto.id}`">
-          <h4>{{ produto.nome }}</h4>
-        </router-link>
-        <span>{{ produto.preco | valorMonetario}}</span>
-        <p>{{ produto.descricao }}</p>
+        <v-card
+          class="mx-auto"
+          max-width="400"
+        >
+          <v-img
+            class="white--text align-end"
+            height="200px"
+            :src="produto.foto"
+          >
+            <v-card-title>{{ produto.nome }}</v-card-title>
+          </v-img>
+          <v-card-subtitle class="pb-0">{{ produto.preco | valorMonetario}}</v-card-subtitle>
+          <v-card-text class="text--primary">
+            <div>{{ produto.descricao }}</div>
+          </v-card-text>
+          <v-card-actions>
+            <router-link :to="`/ecommerce/${produto.id}`">
+              <v-btn color="orange" text>Comprar</v-btn>
+            </router-link>
+          </v-card-actions>
+        </v-card>
       </div>
     </div>
   </div>
+  
 </template>
 
 <script>
