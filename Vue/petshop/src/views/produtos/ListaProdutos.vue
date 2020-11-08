@@ -1,44 +1,46 @@
 <template>
-  <div>
-    <h1>
-      Loja de Produtos
-    </h1>
-    <div class="produtos">
-      <div v-for="(produto) in produtos" :key="produto.id"  class="produto">
-        <v-card
-          class="mx-auto"
-          max-width="400"
-        >
-          <v-img
-            class="white--text align-end"
-            height="200px"
-            :src="produto.foto"
-          >
-            <v-card-title>{{ produto.nome }}</v-card-title>
-          </v-img>
-          <v-card-subtitle class="pb-0">{{ produto.preco | valorMonetario}}</v-card-subtitle>
-          <v-card-text class="text--primary">
-            <div>{{ produto.descricao }}</div>
-          </v-card-text>
-          <v-card-actions>
+  <div> 
+    <div>
+      <h1 class="titulo">Loja de Produtos</h1>
+      <Carrinho :carrinho="carrinho" />
+    </div>
+    <div>
+    <v-spacer></v-spacer>
+      <div v-for="(produto, index) in produtos" :key="index" class="d-flex flex-wrap mb-6">
+        <div >
+          <v-card max-width="500" class="ma-4" >
             <router-link :to="`/ecommerce/${produto.id}`">
-              <v-btn color="orange" text>Comprar</v-btn>
+              <v-img height="200px" :src="produto.foto"></v-img>
+              <v-card-title>{{ produto.nome }}</v-card-title>
+              <v-card-subtitle class="pb-0">{{ produto.preco | valorMonetario}}</v-card-subtitle>
+              <v-card-text class="text--primary descricao">
+                <div>{{ produto.descricao }}</div>
+              </v-card-text>
             </router-link>
-          </v-card-actions>
-        </v-card>
+            <v-card-actions>
+              <v-btn color="orange" @click="adicionaAoCarrinho">Comprar</v-btn>
+            </v-card-actions>
+          </v-card>
+        </div>
+        <v-spacer></v-spacer>
       </div>
     </div>
   </div>
-  
 </template>
 
 <script>
 import axios from 'axios';
+import Carrinho from '@/components/Carrinho';
+import ProdutosNoCarrinho from '@/components/ProdutosNoCarrinho';
 
 export default {
+  components: {
+    Carrinho
+  },
   data(){
     return {
-      produtos: []
+      produtos: [],
+      carrinho: []
     }
   },
   async created() {
@@ -48,31 +50,21 @@ export default {
     async buscarProdutos(){
       const { data } = await axios.get('http://localhost:3000/produtos');
       return data;
-    },
-    // @click="irParaProduto(produto.id)"
-    /* irParaProduto(id){
-      this.$router.push(`/ecommerce/${id}`);
-    } */
-  }
+    }
+  },
+  extends: ProdutosNoCarrinho
 }
 </script>
 
 <style lang="scss" scoped>
-  .produtos{
-    display: flex;
-    flex-direction: column;
-    margin: 2rem;
+  .titulo{
+    text-align: center;
+    margin-bottom: 2rem;
   }
-
-  img{
-    width: 30%;
+  .descricao {
+    max-width: 44ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
-
-  .produto{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 3rem;
-  }
-
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div>
-     <h3>Serviços do Dias</h3>
-    <table>
+     <h2 class="titulo">Serviços do Dias</h2>
+     <v-simple-table v-if="clientes.length > 0">
       <thead>
         <tr>
           <th>Nome</th>
@@ -22,9 +22,13 @@
       </tbody>
       <tfoot>
         <td>Total</td>
-        <td colspan="4">{{ totalServicos | valorMonetario }}</td>
+        <td colspan="3"></td>
+        <td><b>{{ totalServicos | valorMonetario }}</b></td>
       </tfoot>
-    </table>
+     </v-simple-table>
+    <div v-else>
+      <h4>Nenhum Serviço Finalizado</h4>
+    </div>
   </div>
 </template>
 
@@ -40,6 +44,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+ .titulo{
+    margin-bottom: 10px;
+  }
 </style>

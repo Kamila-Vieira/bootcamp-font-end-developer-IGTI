@@ -1,17 +1,29 @@
 <template>
   <div>
-    <div class="row">
-      <div class="col">
-        <recepcao @novo-cadastro="novoCliente"></recepcao>
-      </div>
-      <div class="col">
-        <veterinario :clientes="clientesVeterinario" @atendido="finalizarConsulta"></veterinario>
-        <banho :clientes="clientesBanho" @atendido="finalizarBanho"></banho>
-      </div>
-    </div>
-      <div class="espaco-abaixo"></div>
-      <div class="espaco-abaixo"></div>
-      <balanco :clientes="clientesAtendidos"></balanco>
+    <h1>Bem vindo ao Petshop</h1>
+    <v-row>
+      <v-col md="6" sm="12">
+        <v-card class="pa-4">
+          <recepcao @novo-cadastro="novoCliente"></recepcao>
+        </v-card>
+      </v-col>
+      <v-col md="6" sm="12">
+        <v-card class="pa-4">
+          <veterinario :clientes="clientesVeterinario" @atendido="finalizarConsulta"></veterinario>
+        </v-card>
+        <v-card class="pa-4 mt-4">
+          <banho :clientes="clientesBanho" @atendido="finalizarBanho"></banho>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-spacer></v-spacer>
+    <v-row>
+      <v-col sm="12">
+        <v-card class="pa-4">
+          <balanco :clientes="clientesAtendidos"></balanco>
+        </v-card>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
@@ -58,5 +70,4 @@ export default {
 </script>
 
 <style>
-@import '../assets/styles/main.scss';
 </style>

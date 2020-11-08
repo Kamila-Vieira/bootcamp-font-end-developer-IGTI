@@ -1,9 +1,9 @@
 <template>
   <div>
-    <router-view/>
+    <v-row>
+      <v-col>
+        <router-view/>
+      </v-col>
+    </v-row>
   </div>
 </template>
-
-<style>
-
-</style>

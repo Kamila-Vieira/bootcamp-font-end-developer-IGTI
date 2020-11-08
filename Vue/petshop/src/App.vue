@@ -1,45 +1,34 @@
 <template>
-  <div id="page">
-    <div class="flex">
-      <h3 @click="irParaHome">Home</h3> | <h3 @click="irParaPetshop">Petshop</h3> | <h3 @click="irParaLoja">Loja</h3>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-app-bar app color="primary" dark>
+      <div class="d-flex align-center">
+        <router-link to="/">
+          <v-img
+            alt="Vuetify Logo"
+            class="shrink mr-2"
+            contain
+            src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+            transition="scale-transition"
+            width="40"
+          />
+        </router-link>
+      </div>
+      <v-spacer></v-spacer>
+      <router-link to="/ecommerce" class="white--text mx-3">Loja</router-link>
+      <router-link to="/petshop" class="white--text mx-3">Petshop</router-link>
+    </v-app-bar>
+    <v-main>
+      <v-container>
+        <router-view/>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-export default {
-  name: 'App',
-  methods: {
-    irParaHome(){
-      this.$router.push('/');
-    },
-    irParaPetshop(){
-      this.$router.push('/petshop');
-    },
-    irParaLoja(){
-      this.$router.push('/ecommerce');
-    }
-  }
-}
+
 </script>
 
 <style lang="scss">
-#page {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-.flex{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 35rem;
-  color: #446a91;
-  cursor: pointer;
-}
-
+  a{text-decoration: none;}
 </style>
