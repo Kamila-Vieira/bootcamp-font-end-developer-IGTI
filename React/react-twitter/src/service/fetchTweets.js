@@ -19,7 +19,7 @@ async function fetchTweets(){
   });
 
   let allTweets = new Set();
-  tweets.forEach((tweet) => allTweets.add(tweet.value));
+  tweets.forEach((tweet) => allTweets.add(tweet));
   allTweets = Array.from(allTweets);
   return allTweets;
 }
