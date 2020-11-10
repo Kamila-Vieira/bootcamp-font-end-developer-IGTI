@@ -29,8 +29,8 @@ async function createTweet(tweet){
   return response.data;
 }
 
-async function deleteTweet(tweet) {
-  const response = await axios.delete(`${API_URL}/${tweet.id}`);
+async function deleteTweet(tweetId) {
+  const response = await axios.delete(`${API_URL}/${tweetId}`);
   return response.data;
 }
 

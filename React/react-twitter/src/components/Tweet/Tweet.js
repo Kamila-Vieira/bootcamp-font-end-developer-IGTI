@@ -7,25 +7,32 @@ export default function Tweet({allTweets}) {
   const [removeTweets, setRemoveTweets] = useState(allTweets);
   const [newTweet, setNewTweet] = useState(allTweets);
   
+  
+  async function listAllTweets(){
+    await fetchTweets().then(item => setTweets(item));
+  }
+  
+  async function createNewTweet(){
+    let textAreaValue = document.querySelector('textarea');
+    await createTweet(textAreaValue.value).then(item => {
+      setNewTweet(item);
+      textAreaValue.value = '';
+    });
+  }
+  async function removeTweet(item){
+    await deleteTweet(item.id).then(item => {
+      setRemoveTweets(item);
+    });
+  }
+  
   useEffect(() => {
-  }, [tweets]);
-
-      function listAllTweets(){
-        return fetchTweets().then(item => setTweets(item));
-      }
-      listAllTweets();
-      
-      function createNewTweet(){
-        let textAreaValue = document.querySelector('textarea');
-        return createTweet(textAreaValue.value).then(item => {
-          setNewTweet(item);
-        });
-      }
-/*       function removeTweet(){
-        return deleteTweet(textAreaValue.value).then(item => {
-          setNewTweet(item);
-        });
-      } */
+    let didCancel = false ;
+    listAllTweets();
+    if (!didCancel) return;
+    createNewTweet();
+    removeTweet();
+    return () => { didCancel = true; };
+  }, [listAllTweets, createNewTweet, removeTweet, tweets]);
 
   return (
     <div id={style.container}>
@@ -39,7 +46,7 @@ export default function Tweet({allTweets}) {
             <ul key={item.id}>
               <li>
                 {item.value}
-                <button>Excluir</button>
+                <button onClick={(e) => removeTweet(item, e)}>Excluir</button>
               </li>
             </ul>)
           })}
