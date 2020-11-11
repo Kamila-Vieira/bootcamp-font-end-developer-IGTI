@@ -7,7 +7,6 @@ export default function Tweet({allTweets}) {
   const [removeTweets, setRemoveTweets] = useState(allTweets);
   const [newTweet, setNewTweet] = useState(allTweets);
   
-  
   async function listAllTweets(){
     await fetchTweets().then(item => setTweets(item));
   }
@@ -32,21 +31,20 @@ export default function Tweet({allTweets}) {
     createNewTweet();
     removeTweet();
     return () => { didCancel = true; };
-  }, [listAllTweets, createNewTweet, removeTweet, tweets]);
+  }, [newTweet, removeTweets, tweets]);
 
   return (
-    <div id={style.container}>
+    <div className="container" >
       <label htmlFor="tweet">Escreva seu tweet: </label>
-      <textarea name="tweet" id={style.tweet_textarea} cols="30" rows="10" maxLength="280"></textarea>
-      <button className={style.tweet_button} onClick={createNewTweet}>Tweetar</button>
+      <textarea name="tweet" id={style.tweet_textarea} cols="50" maxLength="280"></textarea>
+      <button className="waves-effect waves-light btn" onClick={createNewTweet}>Tweetar</button>
       <div>
         {tweets.map((item) => {
-          //console.log(item.id)
           return (
             <ul key={item.id}>
-              <li>
+              <li className="card-panel">
                 {item.value}
-                <button onClick={(e) => removeTweet(item, e)}>Excluir</button>
+                <i onClick={(e) => removeTweet(item, e)} className="material-icons">delete</i>
               </li>
             </ul>)
           })}
