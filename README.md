@@ -63,11 +63,13 @@ Estudos, desafios e atividades práticas realizadas durante o Bootcamp da IGTI.
 
 **Screenshot (Atividade Prática):**
 
-**???**<br/>
-<img src="" alt="Screenshot da atividade prática do módulo 3" width="500"/>
+**Loja de Produtos**<br/>
+<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Vue/sreenshots/atividade_I.PNG" alt="Screenshot da atividade prática do módulo 4" width="500"/>
+<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Vue/sreenshots/atividade_II.PNG" alt="Screenshot da atividade prática do módulo 4" width="500"/>
 
 **Screenshot (Desafio Prático):**
 
-**???**<br/>
-<img src="" alt="Screenshot do desafio prático do módulo 3" width="500"/>
+**Carrinho de compras**<br/>
+<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Vue/sreenshots/desafio_I.PNG" alt="Screenshot do desafio prático do módulo 4" width="500"/>
+<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Vue/sreenshots/desafio_II.PNG" alt="Screenshot da atividade prática do módulo 4" width="500"/>
 
