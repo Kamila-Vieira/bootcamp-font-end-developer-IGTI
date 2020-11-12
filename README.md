@@ -15,7 +15,7 @@ Estudos, desafios e atividades práticas realizadas durante o Bootcamp da IGTI.
 **Super Calculadora**<br/>
 <img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Fundamentos/Screeenshots/img/SuperCalculadoraScreenshot.jpeg" alt="Super Calculadora" width="500"/>
 
-**Screenshot (Desafio Prático):**
+**Screenshots (Desafio Prático):**
 
 **Search Devs**<br/>
 <img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Fundamentos/Screeenshots/img/desafioI.JPG" alt="Search Devs" width="500"/>
@@ -32,7 +32,7 @@ Estudos, desafios e atividades práticas realizadas durante o Bootcamp da IGTI.
 **Galeria de Fotos**<br/>
 <img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Angular/Screenshots/screenshot-atv-pratica.PNG" alt="Galeria de Fotos" width="500"/>
 
-**Screenshot (Desafio Prático):**
+**Screenshots (Desafio Prático):**
 
 **Despesas**<br/>
 <img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Angular/Screenshots/despesasI.png" alt="Lista de senadores" width="500"/>
@@ -49,7 +49,7 @@ Estudos, desafios e atividades práticas realizadas durante o Bootcamp da IGTI.
 **Notas do Bootcamp**<br/>
 <img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/React/screenshots_atividade/notas_bootcamp.png" alt="Screenshot da atividade prática do módulo 3" width="500"/>
 
-**Screenshot (Desafio Prático):**
+**Screenshots (Desafio Prático):**
 
 **Tweetando**<br/>
 <img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/React/screenshots_desafio/tela_I.PNG" alt="Screenshot do desafio prático do módulo 3" width="500"/>
@@ -61,13 +61,23 @@ Estudos, desafios e atividades práticas realizadas durante o Bootcamp da IGTI.
 > - [Atividade Pratica](https://drive.google.com/file/d/1Ua4gyaDNH-ljoiqpf4IL6KWp4LgHj_q4/view?usp=sharing) do módulo 4 (Enunciado).<br/>
 > - [Desafio Pratico](https://drive.google.com/file/d/1RMuJc207zrbfWF15eKKW5kwUfbVsaXiY/view?usp=sharing) do módulo 4 (Enunciado).<br/>
 
-**Screenshot (Atividade Prática):**
+**Screenshots (Atividade Prática):**
 
-**???**<br/>
-<img src="" alt="Screenshot da atividade prática do módulo 3" width="500"/>
+**Loja de Produtos**<br/>
+<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Vue/sreenshots/atividade_I.PNG" alt="Screenshot da atividade prática do módulo 4" width="500"/>
+<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Vue/sreenshots/atividade_II.PNG" alt="Screenshot da atividade prática do módulo 4" width="500"/>
 
-**Screenshot (Desafio Prático):**
+**Screenshots (Desafio Prático):**
 
-**???**<br/>
-<img src="" alt="Screenshot do desafio prático do módulo 3" width="500"/>
+**Carrinho de compras**<br/>
+<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Vue/sreenshots/desafio_I.PNG" alt="Screenshot do desafio prático do módulo 4" width="500"/>
+<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Vue/sreenshots/desafio_II.PNG" alt="Screenshot da atividade prática do módulo 4" width="500"/>
 
+#### **_Desafio Final_**
+
+> - **[Enunciado do Desafio Final](https://drive.google.com/file/d/1u62eDpp6OZgWDNopDoFh4AOgLl_9C3H_/view?usp=sharing).**<br/>
+
+**Screenshots:**
+
+<img src="" alt="Screenshot do Desafio" width="500"/>
+<img src="" alt="Screenshot do Desafio" width="500"/>
