@@ -46,13 +46,14 @@ Estudos, desafios e atividades práticas realizadas durante o Bootcamp da IGTI.
 
 **Screenshot (Atividade Prática):**
 
-**???**<br/>
-<img src="" alt="Screenshot da atividade prática do módulo 3" width="500"/>
+**Notas do Bootcamp**<br/>
+<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/React/screenshots_atividade/notas_bootcamp.png" alt="Screenshot da atividade prática do módulo 3" width="500"/>
 
 **Screenshot (Desafio Prático):**
 
-**???**<br/>
-<img src="" alt="Screenshot do desafio prático do módulo 3" width="500"/>
+**Tweetando**<br/>
+<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/React/screenshots_desafio/tela_I.PNG" alt="Screenshot do desafio prático do módulo 3" width="500"/>
+<img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/React/screenshots_desafio/tela_II.PNG" alt="Screenshot do desafio prático do módulo 3" width="500"/>
 
 #### **_Módulo 4 - Vue_**
 
