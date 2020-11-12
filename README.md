@@ -73,3 +73,11 @@ Estudos, desafios e atividades práticas realizadas durante o Bootcamp da IGTI.
 <img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Vue/sreenshots/desafio_I.PNG" alt="Screenshot do desafio prático do módulo 4" width="500"/>
 <img src="https://github.com/Kamila-Vieira/Bootcamp-Font-end-Developer-IGTI/blob/master/Vue/sreenshots/desafio_II.PNG" alt="Screenshot da atividade prática do módulo 4" width="500"/>
 
+#### **_Desafio Final_**
+
+> - **[Enunciado do Desafio Final](https://drive.google.com/file/d/1u62eDpp6OZgWDNopDoFh4AOgLl_9C3H_/view?usp=sharing).**<br/>
+
+**Screenshot:**
+
+<img src="" alt="Screenshot do Desafio" width="500"/>
+/*<img src="" alt="Screenshot do Desafio" width="500"/>*/
