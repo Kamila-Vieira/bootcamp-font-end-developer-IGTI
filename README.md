@@ -79,6 +79,5 @@ Estudos, desafios e atividades práticas realizadas durante o Bootcamp da IGTI.
 
 **Screenshots:**
 
-**Em Breve**
-/**<img src="" alt="Screenshot do Desafio" width="500"/>**/
-/**<img src="" alt="Screenshot do Desafio" width="500"/>**/
+<img src="" alt="Screenshot do Desafio" width="500"/>
+<img src="" alt="Screenshot do Desafio" width="500"/>
