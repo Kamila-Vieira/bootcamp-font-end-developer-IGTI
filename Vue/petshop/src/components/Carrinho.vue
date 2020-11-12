@@ -25,6 +25,7 @@
           <v-list-item-title class="d-flex align-center mb-2">
             <img :src="item.foto" class="foto-produto-carrinho">
             {{ item.nome }} - {{ item.preco | valorMonetario }}
+            <v-icon @click="removerProduto(index)" class="botao-remover" color="red">mdi-delete</v-icon>
           </v-list-item-title>
         </v-list-item>
       </v-list>
@@ -39,6 +40,16 @@
 <script>
 export default {
   props: ['carrinho'],
+  data(){
+    return {
+      removeProduto: 'Remove produto',
+    }
+  },
+  methods: {
+    removerProduto(indice){
+      return this.carrinho.splice(indice, 1);
+    }
+  }
 }
 </script>
 
@@ -46,5 +57,8 @@ export default {
   .foto-produto-carrinho{
     width: 80px;
     margin-right: 10px;
+  }
+  .botao-remover{
+    margin-left: 10px;
   }
 </style>

@@ -14,9 +14,7 @@
             <div>{{ produto.descricao }}</div>
           </v-card-text>
           <v-card-actions>
-            <router-link :to="`/ecommerce/${produto.id}`">
-              <v-btn color="orange"  @click="adicionaAoCarrinho" >Comprar</v-btn>
-            </router-link>
+            <v-btn color="orange" @click="adicionaAoCarrinho">Comprar</v-btn>
           </v-card-actions>
         </v-card>
       </div>
@@ -27,7 +25,6 @@
 <script>
 import axios from 'axios';
 import Carrinho from '@/components/Carrinho';
-import ProdutosNoCarrinho from '@/components/ProdutosNoCarrinho';
 
 export default {
   components: {
@@ -50,9 +47,14 @@ export default {
     async buscarProdutos(){
       const { data } = await axios.get('http://localhost:3000/produtos');
       return data;
+    },
+    adicionaAoCarrinho(){
+      this.produtos.map(produto => {
+        produto.id === this.detalheProduto ? this.carrinho.push(produto) : '';
+        return this.carrinho;
+      });
     }
-  },
-  extends: ProdutosNoCarrinho
+  }
 }
 </script>
 
