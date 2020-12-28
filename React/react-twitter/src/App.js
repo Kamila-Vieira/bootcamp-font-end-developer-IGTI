@@ -4,7 +4,7 @@ import * as api from './service/fetchTweets';
 
 export default function App() {
   const [allTweets, setAllTweets] = useState([]);
-  
+
   useEffect(() => {
     const getTweets = async () => {
       document.querySelector('textArea').focus();

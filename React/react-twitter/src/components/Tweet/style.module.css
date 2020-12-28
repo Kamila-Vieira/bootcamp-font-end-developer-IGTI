@@ -1,9 +1,39 @@
+.tweet_container {
+  display: flex;
+  flex-direction: column;
+  margin: 100px 200px;
+}
+
+textarea {
+  background: #0c63a6;
+  font-size: 18px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+.count_char_large {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.count_char_Small {
+  color: green;
+  font-weight: bold;
+}
+button {
+  width: 100px;
+  margin-top: 10px;
+}
+.tweets_list {
+  margin: 0 200px;
+}
 li {
   display: flex;
   justify-content: space-between;
 
   font-size: 20px;
   font-weight: bold;
+
+  width: 100%;
 }
 
 li i {
@@ -15,10 +45,4 @@ label {
   font-size: 25px;
   color: #000000;
   font-weight: bold;
-}
-
-textarea {
-  background: #0c63a6;
-  font-size: 18px;
-  height: 200px;
 }
