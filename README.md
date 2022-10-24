@@ -6,9 +6,9 @@ Estudos, desafios e atividades práticas realizadas durante o Bootcamp da IGTI.
 
 #### **_Módulo 1 - Fundamentos (Javascript Puro e ES6+)_**
 
-> - [Apostila](https://drive.google.com/file/d/1dwTGBVSNEy7TQLMuYC9QJnZEJuWXkvSl/view?usp=sharing) do módulo 1.<br/>
-> - [Atividade Pratica](https://drive.google.com/file/d/1Mma-dpwMZTo_YqmhZV8WOm5gpcKEg_0h/view?usp=sharing) do módulo 1 (Enunciado).<br/>
-> - [Desafio Pratico](https://drive.google.com/file/d/1u-MGtgVmJ-xjX1IslvB8xRkOPCvI5hM7/view?usp=sharing) do módulo 1 (Enunciado).<br/>
+> - Atividade Pratica do módulo 1: Construir, utilizando HTML, CSS e JavaScript puro, uma aplicação denominada
+**Super Calculadora**.<br/>
+> - Desafio Pratico do módulo 1: Criar uma aplicação para pesquisar desenvolvedores (dev's) com opções de filtragem.<br/>
 
 **Screenshot (Atividade Prática):**
 
@@ -23,9 +23,8 @@ Estudos, desafios e atividades práticas realizadas durante o Bootcamp da IGTI.
 
 #### **_Módulo 2 - Angular_**
 
-> - [Apostila](https://drive.google.com/file/d/1MlyJ1bA2Q7aNwDbm87bI-6wXfPrKKORC/view?usp=sharing) do módulo 2.<br/>
-> - [Atividade Pratica](https://drive.google.com/file/d/1djrctL04x7MLhG6ZsDcfB2CS_TS_w20D/view?usp=sharing) do módulo 2 (Enunciado).<br/>
-> - [Desafio Pratico](https://drive.google.com/file/d/1D621R-iudADEwVRKSiK92whyt3EUubpV/view?usp=sharing) do módulo 2 (Enunciado).<br/>
+> - Atividade Pratica do módulo 2: Utilizando o Angular, construir um componente para exibir uma galeria de fotos.<br/>
+> - Desafio Pratico do módulo 2: Utilizando o Angular, construir uma aplicação para exibir as despesas dos senadores no ano de 2019, conforme base de dados fornecida.<br/>
 
 **Screenshot (Atividade Prática):**
 
@@ -40,9 +39,8 @@ Estudos, desafios e atividades práticas realizadas durante o Bootcamp da IGTI.
 
 #### **_Módulo 3 - React_**
 
-> - [Apostila](https://drive.google.com/file/d/1B5EdBhPKUZlvBEiqBG4Y3IlGfByHjaVE/view?usp=sharing) do módulo 3.<br/>
-> - [Atividade Pratica](https://drive.google.com/file/d/1kXtLbPTxZ6w1Y3YgZzE91bAW1n3_At-0/view?usp=sharing) do módulo 3 (Enunciado).<br/>
-> - [Desafio Pratico](https://drive.google.com/file/d/1GiIbvahnaD-rWBKnumwM8feALwRBnhuW/view?usp=sharing) do módulo 3 (Enunciado).<br/>
+> - Atividade Pratica do módulo 3: Construa, utilizando React, uma aplicação para controlar as notas dos Módulos dos Bootcamps do IGTI e indicar se o aluno será  aprovado conforme os seguintes critérios, que foram extraídos do PPC (Plano Pedagógico dos Cursos).<br/>
+> - Desafio Pratico do módulo 3: Criar uma aplicação com React para simular a interface principal do Twitter (react-twitter).<br/>
 
 **Screenshot (Atividade Prática):**
 
@@ -57,9 +55,8 @@ Estudos, desafios e atividades práticas realizadas durante o Bootcamp da IGTI.
 
 #### **_Módulo 4 - Vue_**
 
-> - [Apostila](https://drive.google.com/file/d/1TpdV-5gRF0MRtdBpreqeRq_KUp4_6SyP/view?usp=sharing) do módulo 4.<br/>
-> - [Atividade Pratica](https://drive.google.com/file/d/1Ua4gyaDNH-ljoiqpf4IL6KWp4LgHj_q4/view?usp=sharing) do módulo 4 (Enunciado).<br/>
-> - [Desafio Pratico](https://drive.google.com/file/d/1RMuJc207zrbfWF15eKKW5kwUfbVsaXiY/view?usp=sharing) do módulo 4 (Enunciado).<br/>
+> - Atividade Pratica do módulo 4: Criar um E-commerce utilizando Vue.<br/>
+> - Desafio Pratico do módulo 4: A partir do e-commerce criado no trabalho prático, implementar o carrinho de compras.<br/>
 
 **Screenshots (Atividade Prática):**
 
@@ -75,7 +72,8 @@ Estudos, desafios e atividades práticas realizadas durante o Bootcamp da IGTI.
 
 #### **_Desafio Final_**
 
-> - **[Enunciado do Desafio Final](https://drive.google.com/file/d/1u62eDpp6OZgWDNopDoFh4AOgLl_9C3H_/view?usp=sharing).**<br/>
+> - **Desafio Final:** Criar uma aplicação web front end que simula uma espécie de "Instagram de filmes" cujos
+usuários são "super-heróis".<br/>
 
 **Screenshots:**
 
